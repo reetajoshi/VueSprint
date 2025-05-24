@@ -1,18 +1,18 @@
+<template>
+  <HelloWorld msg="this is vuejs3" isLogged="True" :items="itemData" @greeted="handleFun"/>
+</template>
+
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue';
+const itemData =ref([
+  {id:1, name:"Sai Sravani"},
+  {id:2, name:"sai Varma"}
+]);
+const handleFun=(msg)=>{
+  alert(msg);
+};
 </script>
-
-<template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld/>
-</template>
 
 
 <style scoped>
@@ -29,3 +29,4 @@ import HelloWorld from './components/HelloWorld.vue'
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
+
