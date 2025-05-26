@@ -7,7 +7,7 @@
       <div v-for="(items, k) in items" :key="k">
         <p class="text-gray-600">{{ items.id }} : {{ items.name }}</p>
       </div>
-      <button @click="sendGreet">Click Me</button>
+     
     
   </div>
 </template>
