@@ -27,7 +27,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  background-color: chocolate;
+  background-color: rgb(198, 30, 210);
 }
 
 h1 {

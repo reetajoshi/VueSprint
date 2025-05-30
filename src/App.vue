@@ -14,10 +14,11 @@
 </style>
 <template>
   <DefaultLayout>
-      <router-view />
+      <ComponentsExample />
   </DefaultLayout>
 </template>
 <script setup>
 import DefaultLayout from '@/layouts/Default.vue'
+import ComponentsExample from '@/components/Components_Example.vue'
 import { ref } from 'vue'
 </script>
