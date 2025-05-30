@@ -1,7 +1,7 @@
 <template>
   <div class="layout-container">
     <header class="header">
-      Vue Sprint
+      <router-link to="/">Vue Sprint</router-link>
     </header>
 
     <main class="main-content">
