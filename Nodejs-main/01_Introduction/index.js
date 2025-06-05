@@ -1,3 +1,35 @@
+const express = require('express'); 
+const app = express();              
+const port = 5001;                  
+
+app.use(express.json());
+
+
+const apiRoutes = require('./routes/apiRoutes');
+
+
+app.use('/', apiRoutes);
+
+
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+    console.log('Express server is ready to receive requests!');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const http = require('http');
 
 // const server = http.createServer(function (request, response) {
@@ -43,19 +75,6 @@
 //     console.log('Try: http://localhost:3000/months'); // New URL
 //     console.log('Try: http://localhost:3000/days');
 // });
-const express = require('express'); // Import the Express library
-const app = express();              // Create an Express application
-const port = 3000;                  // Define the port your server will listen on
+// C:\Users\V K SAI SHARAVANT\Documents\MyProjects\VueSprint-main\01_introduction\index.js
 
-// --- Import your API routes from the new file ---
-const apiRoutes = require('./Routes/apiroutes'); // Path is relative to index.js
 
-// --- Tell Express to use your API routes ---
-// Any request that comes to your server will now be handled by apiRoutes.js.
-// So, /list, /ping, /time will still work as before.
-app.use('/', apiRoutes);
-
-// --- Start the server ---
-app.listen(port, () => {
-    console.log(`Express server listening at http://localhost:${port}`);
-});
