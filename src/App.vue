@@ -1,25 +1,32 @@
 <template>
+    <slots>
+        <template #header>
+            <h1>Vue3 App</h1>
+        </template>
+        
         <div class="container p-5">
-            <lifecycleHooks/>
-            <div class="bg-info p-2 m-4 rounded text-center"> |
-                <router-link to="/">Home</router-link> |
-                <router-link :to="{ name: 'about' }">About</router-link> |
-                <router-link :to="`/profile/101`">Profile 101</router-link> |
-                <router-view></router-view>
+            <div class="bg-info p-2 m-4 rounded text-center">
+                <dynComp></dynComp>
             </div>
         </div>
+       
+        <template #footer>
+            <p>&copy copyright 2025 | All rights reserved</p>
+        </template>
+    </slots>
 </template>
 
 <script setup>
-    import lifecycleHooks from './components/lifecycleHooks(4).vue'
+    import slots from './components/slots(5).vue'
+    import dynComp from './components/dynamicComponents(5).vue'
 </script>
 
 <style>
     body{
         background-color: #242424;
-        color:black;
+        color:white;
     }
     .bg-info{
-        background-color:rgb(3, 233, 156) !important;
+        background-color:rgb(2, 214, 143) !important;
     }
 </style>
